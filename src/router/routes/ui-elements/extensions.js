@@ -22,13 +22,13 @@ export default [
     name: 'extensions-drag-and-drop',
     component: () => import('@/views/extensions/drag-drop/DragDrop.vue'),
     meta: {
-      pageTitle: 'Drag & Drop',
+      pageTitle: 'Personel Atama',
       breadcrumb: [
         {
-          text: 'Extensions',
+          text: 'Birim Değiştir',
         },
         {
-          text: 'Drag & Drop',
+          text: 'Personel Atama',
           active: true,
         },
       ],

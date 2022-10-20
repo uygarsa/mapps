@@ -1,5 +1,5 @@
 <template>
-  <b-card-code title="Multiple Lists">
+  <b-card-code title="Personel Atama">
     <b-card-text>
       <span>Lütfen Personeli Aktarmak İstediğiniz Daire Başkanlığına Bağlı Birim Üzerine 
         Sürükleyip Bırakınız </span>

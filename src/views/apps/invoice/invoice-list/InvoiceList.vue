@@ -16,7 +16,7 @@
           md="6"
           class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
         >
-          <label>Entries</label>
+          <label>Listelenecek Kullanıcı Sayısı</label>
           <v-select
             v-model="perPage"
             :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
@@ -24,12 +24,6 @@
             :clearable="false"
             class="per-page-selector d-inline-block ml-50 mr-1"
           />
-          <b-button
-            variant="primary"
-            :to="{ name: 'apps-invoice-add'}"
-          >
-            KULLANICI EKLE
-          </b-button>
         </b-col>
 
         <!-- Search -->
@@ -41,21 +35,15 @@
             <b-form-input
               v-model="searchQuery"
               class="d-inline-block mr-1"
-              placeholder="Search..."
+              placeholder="Kullanıcı Ara"
             />
-            <v-select
-              v-model="statusFilter"
-              :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-              :options="statusOptions"
-              class="invoice-filter-select"
-              placeholder="Select Status"
-            >
-              <template #selected-option="{ label }">
-                <span class="text-truncate overflow-hidden">
-                  {{ label }}
-                </span>
-              </template>
-            </v-select>
+            <b-button
+            variant="primary"
+            :to="{ name: 'apps-invoice-add'}"
+          >
+            KULLANICI EKLE
+          </b-button>
+          
           </div>
         </b-col>
       </b-row>
@@ -208,16 +196,13 @@
             </b-dropdown-item>
             <b-dropdown-item :to="{ name: 'apps-invoice-edit', params: { id: data.item.id } }">
               <feather-icon icon="EditIcon" />
-              <span class="align-middle ml-50">Edit</span>
+              <span class="align-middle ml-50">Düzenle</span>
             </b-dropdown-item>
             <b-dropdown-item>
               <feather-icon icon="TrashIcon" />
-              <span class="align-middle ml-50">Delete</span>
+              <span class="align-middle ml-50">Sil</span>
             </b-dropdown-item>
-            <b-dropdown-item>
-              <feather-icon icon="CopyIcon" />
-              <span class="align-middle ml-50">Duplicate</span>
-            </b-dropdown-item>
+
           </b-dropdown>
         </div>
       </template>
@@ -231,7 +216,7 @@
           sm="6"
           class="d-flex align-items-center justify-content-center justify-content-sm-start"
         >
-          <span class="text-muted">Showing {{ dataMeta.from }} to {{ dataMeta.to }} of {{ dataMeta.of }} entries</span>
+          
         </b-col>
         <!-- Pagination -->
         <b-col

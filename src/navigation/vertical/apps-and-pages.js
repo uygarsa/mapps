@@ -2,7 +2,7 @@ export default [
  
   {
     
-    title: 'Dashboard',
+    title: 'Genel Bakış',
     route: 'dashboard-ecommerce',
 
 },

@@ -13,13 +13,12 @@ export default function useInvoicesList() {
 
   // Table Handlers
   const tableColumns = [
-    { key: 'id', label: '#', sortable: true },
-    { key: 'invoiceStatus', sortable: true },
-    { key: 'client', sortable: true },
-    { key: 'total', sortable: true, formatter: val => `$${val}` },
-    { key: 'issuedDate', sortable: true },
-    { key: 'balance', sortable: true },
-    { key: 'actions' },
+    { key: 'id', label: 'Sicil No', sortable: true },
+    { key: 'invoiceStatus', label: 'Sicil No', sortable: true },
+    { key: 'client', label: 'İsİm', sortable: true },
+    { key: 'total', label: 'Telefon', sortable: true, formatter: val => `$${val}` },
+    { key: 'issuedDate', label: 'E-Posta', sortable: true },
+    { key: 'actions', label: 'Seçenekler', },
   ]
   const perPage = ref(10)
   const totalInvoices = ref(0)
